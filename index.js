@@ -32,7 +32,6 @@ function askAndCreate() {
             .prompt(generateQs(newRole))
             .then(answers => {
                 employeeList.push(createEmployee(answers, newRole));
-                console.log(employeeList);
                 askAndCreate();
             })
         }
@@ -51,7 +50,6 @@ function init() {
     .prompt(generateQs('manager'))
     .then((answers) => {
         employeeList.push(createEmployee(answers, 'manager'));
-        console.log(employeeList);
     })
     .then(() => {
         askAndCreate();
